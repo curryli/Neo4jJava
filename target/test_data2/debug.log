@@ -1,0 +1,8 @@
+2016-12-13 08:11:05.631+0000 INFO  [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[target\test_data2])
+2016-12-13 08:11:06.644+0000 INFO  [o.n.k.a.i.l.LuceneLabelScanStore] No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2016-12-13 08:11:06.794+0000 INFO  [o.n.k.a.i.l.LuceneLabelScanStore] Rebuilding lucene scan store, this may take a while
+2016-12-13 08:11:06.801+0000 INFO  [o.n.k.a.i.l.LuceneLabelScanStore] Lucene scan store rebuilt (roughly 0 nodes)
+2016-12-13 08:11:06.829+0000 WARN  [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
+2016-12-13 08:11:07.019+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 1 to [target\test_data2\neostore.counts.db.b], from [target\test_data2\neostore.counts.db.a].
+2016-12-13 08:11:07.022+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 1 to [target\test_data2\neostore.counts.db.b], from [target\test_data2\neostore.counts.db.a].
+2016-12-13 08:11:08.123+0000 INFO  [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[target\test_data2])

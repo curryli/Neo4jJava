@@ -4,14 +4,38 @@ import java.sql.ResultSet;
 import java.sql.SQLException;  
 import java.sql.Statement;  
   
+
 import org.neo4j.jdbc.Driver;  
 //Class.forName("org.neo4j.jdbc.Driver");  
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
   
 //Connect  
   
 public class neo4jJdbc {  
-  
+//	 public static void checkDatabaseIsRunning() {
+//        // START SNIPPET: checkServer
+//        WebResource resource = Client.create().resource("http://localhost:7474");
+//        ClientResponse response = resource.get(ClientResponse.class);
+//        resource.addFilter(new HTTPBasicAuthFilter("neo4j", "1234567"));
+//        if (response.getStatus() == 200) {
+//            System.out.println("连接成功!");
+//        } else {
+//            System.out.println("连接失败!");
+//        }
+//        // System.out.println(String.format("GET on [%s], status code [%d]",
+//        // SERVER_ROOT_URI, response.getStatus()));
+//        response.close();
+//        // END SNIPPET: checkServer
+//    }
+//	
+	
     public static void main(String[] args) throws SQLException {  
+//    	checkDatabaseIsRunning();
+    	
         // TODO Auto-generated method stub  
         Connection con = DriverManager.getConnection("jdbc:neo4j://localhost:7474/","neo4j","1234567");  
   
@@ -33,6 +57,10 @@ public class neo4jJdbc {
 //MATCH (n)
 //OPTIONAL MATCH (n)-[r]-()
 //DELETE n,r
+
+
+
+
 
 //MATCH (n) RETURN n
 
