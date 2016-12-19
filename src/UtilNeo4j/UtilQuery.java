@@ -72,7 +72,7 @@ public class UtilQuery
 	public static void CreateNode(String filename, String NodeType, ArrayList<String> NodeProperty){
     	NodeProperty.add("nid");  //主键,  默认将节点号作为第一个属性： 主键nid
         String QueryCmd = "CREATE (";
-    	QueryCmd = QueryCmd + NodeType + ": " + NodeType + "{";
+    	QueryCmd = QueryCmd +  ": " + NodeType + "{";
     	int count=0;
     	for(String np: NodeProperty){
     		if(count==0)
@@ -97,7 +97,7 @@ public class UtilQuery
     		Property.add(rp);
     	
 		String QueryCmd = String.format("match (a),(b) where a.nid={nid1} and b.nid={nid2} create (a)-[");
-    	QueryCmd = QueryCmd + EdgeType + ": " + EdgeType + "{";
+    	QueryCmd = QueryCmd + ": " + EdgeType + "{";
     	QueryCmd = QueryCmd + Property.get(2) + ": {" + Property.get(2) + "}";
     	int k=3;
     	while(k<Property.size()){
