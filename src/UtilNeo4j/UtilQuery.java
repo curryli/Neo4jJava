@@ -98,11 +98,14 @@ public class UtilQuery
     	
 		String QueryCmd = String.format("match (a),(b) where a.nid={nid1} and b.nid={nid2} create (a)-[");
     	QueryCmd = QueryCmd + ": " + EdgeType + "{";
-    	QueryCmd = QueryCmd + Property.get(2) + ": {" + Property.get(2) + "}";
-    	int k=3;
-    	while(k<Property.size()){
+    	
+    	if(Property.size()>2){
+    	  QueryCmd = QueryCmd + Property.get(2) + ": {" + Property.get(2) + "}";
+    	  int k=3;
+    	  while(k<Property.size()){
     		  QueryCmd = QueryCmd + ", " + Property.get(k) + ": {" + Property.get(k) + "}";
     		  k++;
+    	 }
     	}
     	
     	QueryCmd = QueryCmd + "}]->(b)"; 
