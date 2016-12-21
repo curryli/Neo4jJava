@@ -16,7 +16,7 @@ public class testFlow {
 		
 		String NodeType1 = "Card"; 
     	ArrayList<String> NodeProperty1 = new ArrayList<String>();
-    	UtilQuery.CreateNode("EdgeFile\\card4.txt", NodeType1, NodeProperty1);               //match (p: Card {nid:"1"}) return p;
+    	UtilQuery.CreateNode("EdgeFile\\card4.txt", NodeType1, NodeProperty1);               
   
     	
     	String EdgeType = "TRANS"; 
@@ -48,5 +48,13 @@ public class testFlow {
 		System.out.println("All flow done!");
     	
 	}
-
+	
+	
+	//Cypher
+	//match (p: Card {nid:"1"}) return p;
+	//match (p: Card) where p.nid =~ '.*1.*'  RETURN p  查找nid属性中带1的所有节点
+	//match (p: Card {nid:"2"})-[:TRANS]-(neighbors) RETURN p,neighbors  查找跟2有交易关系的节点   
+	//match (p: Card {nid:"2"})-[:TRANS*1..2]-(neighbors) RETURN p,collect(DISTINCT neighbors)     查找跟2有交易关系的节点  二层关系网络
+	//match (p: Card {nid:"1"})-[:TRANS*1..3]-(neighbors) RETURN p,collect(DISTINCT neighbors)      查找跟1有交易关系的节点   3层关系网络
+    //match p=allShortestPaths((a: Card {nid:"1919"})-[:TRANS*1..3]-(b: Card {nid:"2240"})) RETURN p   3层关系之内两个节点间的最短路劲
 }
