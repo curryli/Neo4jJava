@@ -13,7 +13,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
   
-//Connect  
+
   
 public class neo4jJdbc {  
 //	 public static void checkDatabaseIsRunning() {
